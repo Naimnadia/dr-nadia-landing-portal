@@ -1,6 +1,6 @@
 
 import React from 'react';
-import Button from './ui/Button';
+import ButtonCustom from './ui/button-custom';
 import { Phone, Clock, Calendar, MapPin } from 'lucide-react';
 
 const Appointment = () => {
@@ -66,14 +66,14 @@ const Appointment = () => {
               </p>
               
               <div className="mt-auto">
-                <Button 
+                <ButtonCustom 
                   variant="primary" 
                   icon={<Phone size={18} />} 
                   className="w-full justify-center text-lg py-6 rtl:flex-row-reverse"
                   onClick={() => window.location.href = 'tel:0645483280'}
                 >
                   اتصل الآن: 0645483280
-                </Button>
+                </ButtonCustom>
               </div>
               
               <p className="text-sm text-medical-600 mt-4 text-center">
@@ -89,7 +89,7 @@ const Appointment = () => {
             <p className="text-medical-700">نحن هنا للإجابة على أسئلتك وتقديم المساعدة اللازمة</p>
           </div>
           
-          <Button 
+          <ButtonCustom 
             variant="secondary" 
             icon={<Calendar size={18} />} 
             size="lg"
@@ -97,7 +97,7 @@ const Appointment = () => {
             onClick={() => document.getElementById('appointment')?.scrollIntoView({ behavior: 'smooth' })}
           >
             تواصل معنا
-          </Button>
+          </ButtonCustom>
         </div>
       </div>
       
