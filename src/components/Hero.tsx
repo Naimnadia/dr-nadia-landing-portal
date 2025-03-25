@@ -1,3 +1,4 @@
+
 import React from 'react';
 import ButtonCustom from './ui/button-custom';
 import { Calendar, ArrowLeft } from 'lucide-react';
@@ -14,11 +15,10 @@ const Hero = () => {
           <div className="w-full md:w-7/12 flex flex-col items-center md:items-end text-center md:text-right transform-gpu" style={{ direction: 'rtl' }}>
             <span className="px-5 py-2 bg-accent/10 text-accent rounded-full text-lg font-bold mb-4 sharp-text">أخصائية أنف وأذن وحنجرة</span>
             <h1 className="mb-4 sharp-text transform-gpu">
-              <span className="block text-white">صحتك,</span>
-              <span className="text-gradient font-bold text-5xl md:text-6xl lg:text-7xl">أولويتنا</span>
+              <span className="text-gradient font-bold text-5xl md:text-6xl lg:text-7xl">الدكتورة نادية نعيم</span>
             </h1>
             <h2 className="text-3xl md:text-4xl text-secondary mb-6 max-w-2xl font-bold sharp-text transform-gpu">
-              الدكتورة نادية نعيم - خبرة متميزة في علاج أمراض الأنف والأذن والحنجرة
+              خبرة متميزة في علاج أمراض الأنف والأذن والحنجرة
             </h2>
             <p className="text-secondary/80 mb-8 max-w-xl text-xl sharp-text">
               متخصصة في تشخيص وعلاج أمراض الأنف والأذن والحنجرة بأحدث التقنيات والأساليب الطبية. 
