@@ -13,7 +13,7 @@ const Index = () => {
     document.documentElement.dir = 'rtl';
     document.title = 'د. نادية نعيم - أخصائية أنف وأذن وحنجرة';
     
-    // Smooth scrolling for anchor links
+    // Smooth scrolling for anchor links with improved performance
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -22,12 +22,24 @@ const Index = () => {
         
         const targetElement = document.querySelector(targetId);
         if (targetElement) {
+          // Using scrollIntoView with improved options for smoother scrolling
           targetElement.scrollIntoView({
-            behavior: 'smooth'
+            behavior: 'smooth',
+            block: 'start'
           });
         }
       });
     });
+    
+    // Improve scrolling performance
+    const improveScrollPerformance = () => {
+      const sections = document.querySelectorAll('section');
+      sections.forEach(section => {
+        section.classList.add('smooth-transition');
+      });
+    };
+    
+    improveScrollPerformance();
     
     return () => {
       // Clean up event listeners

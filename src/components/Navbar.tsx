@@ -27,22 +27,22 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
-        <a href="#" className="text-3xl font-display font-bold text-white">
+        <a href="#" className="text-3xl font-display font-bold text-white sharp-text">
           د. نادية نعيم
         </a>
         
         <nav className="hidden md:flex items-center space-x-6 rtl:space-x-reverse">
-          <a href="#home" className="text-white/80 hover:text-white transition-colors text-lg font-medium">الرئيسية</a>
-          <a href="#services" className="text-white/80 hover:text-white transition-colors text-lg font-medium">الخدمات</a>
-          <a href="#experience" className="text-white/80 hover:text-white transition-colors text-lg font-medium">الخبرات</a>
-          <a href="#appointment" className="text-white/80 hover:text-white transition-colors text-lg font-medium">حجز موعد</a>
+          <a href="#home" className="text-white/80 hover:text-white transition-colors text-lg font-medium sharp-text">الرئيسية</a>
+          <a href="#services" className="text-white/80 hover:text-white transition-colors text-lg font-medium sharp-text">الخدمات</a>
+          <a href="#experience" className="text-white/80 hover:text-white transition-colors text-lg font-medium sharp-text">الخبرات</a>
+          <a href="#appointment" className="text-white/80 hover:text-white transition-colors text-lg font-medium sharp-text">حجز موعد</a>
         </nav>
         
         <div className="hidden md:flex">
           <ButtonCustom 
             variant="primary" 
             icon={<Phone size={18} />} 
-            className="rtl:flex-row-reverse text-lg font-bold"
+            className="rtl:flex-row-reverse text-lg font-bold sharp-text"
           >
             0645483280
           </ButtonCustom>
@@ -63,28 +63,28 @@ const Navbar = () => {
           <div className="flex flex-col p-6 space-y-4">
             <a 
               href="#home" 
-              className="text-white/80 hover:text-white transition-colors py-2 text-xl font-medium"
+              className="text-white/80 hover:text-white transition-colors py-2 text-xl font-medium sharp-text"
               onClick={() => setIsMenuOpen(false)}
             >
               الرئيسية
             </a>
             <a 
               href="#services" 
-              className="text-white/80 hover:text-white transition-colors py-2 text-xl font-medium"
+              className="text-white/80 hover:text-white transition-colors py-2 text-xl font-medium sharp-text"
               onClick={() => setIsMenuOpen(false)}
             >
               الخدمات
             </a>
             <a 
               href="#experience" 
-              className="text-white/80 hover:text-white transition-colors py-2 text-xl font-medium"
+              className="text-white/80 hover:text-white transition-colors py-2 text-xl font-medium sharp-text"
               onClick={() => setIsMenuOpen(false)}
             >
               الخبرات
             </a>
             <a 
               href="#appointment" 
-              className="text-white/80 hover:text-white transition-colors py-2 text-xl font-medium"
+              className="text-white/80 hover:text-white transition-colors py-2 text-xl font-medium sharp-text"
               onClick={() => setIsMenuOpen(false)}
             >
               حجز موعد
@@ -92,7 +92,7 @@ const Navbar = () => {
             <ButtonCustom 
               variant="primary" 
               icon={<Phone size={20} />} 
-              className="w-full justify-center mt-2 rtl:flex-row-reverse text-lg font-bold"
+              className="w-full justify-center mt-2 rtl:flex-row-reverse text-lg font-bold sharp-text"
             >
               0645483280
             </ButtonCustom>

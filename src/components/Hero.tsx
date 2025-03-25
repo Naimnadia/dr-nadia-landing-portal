@@ -12,16 +12,16 @@ const Hero = () => {
       
       <div className="container mx-auto relative z-10">
         <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-12">
-          <div className="w-full md:w-7/12 flex flex-col items-center md:items-end text-center md:text-right animate-fade-in" style={{ direction: 'rtl' }}>
-            <span className="px-5 py-2 bg-accent/10 text-accent rounded-full text-lg font-bold mb-4">أخصائية أنف وأذن وحنجرة</span>
-            <h1 className="mb-4">
+          <div className="w-full md:w-7/12 flex flex-col items-center md:items-end text-center md:text-right smooth-transition" style={{ direction: 'rtl' }}>
+            <span className="px-5 py-2 bg-accent/10 text-accent rounded-full text-lg font-bold mb-4 sharp-text">أخصائية أنف وأذن وحنجرة</span>
+            <h1 className="mb-4 sharp-text">
               <span className="block text-white">صحتك,</span>
               <span className="text-gradient font-bold text-5xl md:text-6xl lg:text-7xl">أولويتنا</span>
             </h1>
-            <h2 className="text-3xl md:text-4xl text-secondary mb-6 max-w-2xl font-bold">
+            <h2 className="text-3xl md:text-4xl text-secondary mb-6 max-w-2xl font-bold sharp-text">
               الدكتورة نادية نعيم - خبرة متميزة في علاج أمراض الأنف والأذن والحنجرة
             </h2>
-            <p className="text-secondary/80 mb-8 max-w-xl text-xl">
+            <p className="text-secondary/80 mb-8 max-w-xl text-xl sharp-text">
               متخصصة في تشخيص وعلاج أمراض الأنف والأذن والحنجرة بأحدث التقنيات والأساليب الطبية. 
               رعاية طبية متميزة ومخصصة لكل مريض.
             </p>
@@ -49,7 +49,7 @@ const Hero = () => {
             </div>
           </div>
           
-          <div className="w-full md:w-5/12 animate-slide-in-right">
+          <div className="w-full md:w-5/12 smooth-transition">
             <div className="relative w-full max-w-md mx-auto">
               <div className="w-full aspect-[3/4] rounded-2xl bg-accent/10 p-2">
                 <div className="w-full h-full rounded-xl overflow-hidden">
@@ -61,8 +61,8 @@ const Hero = () => {
                 </div>
               </div>
               <div className="absolute -top-6 -right-6 w-28 h-28 rounded-full bg-accent flex items-center justify-center shadow-lg">
-                <span className="text-white font-bold text-2xl">15+</span>
-                <span className="text-white text-sm absolute bottom-7 font-bold">سنوات الخبرة</span>
+                <span className="text-white font-bold text-2xl sharp-text">15+</span>
+                <span className="text-white text-sm absolute bottom-7 font-bold sharp-text">سنوات الخبرة</span>
               </div>
             </div>
           </div>
