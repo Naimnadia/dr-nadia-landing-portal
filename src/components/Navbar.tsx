@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Phone } from 'lucide-react';
-import Button from './ui/Button';
+import ButtonCustom from './ui/button-custom';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -39,13 +39,13 @@ const Navbar = () => {
         </nav>
         
         <div className="hidden md:flex">
-          <Button 
+          <ButtonCustom 
             variant="primary" 
             icon={<Phone size={18} />} 
             className="rtl:flex-row-reverse"
           >
             0645483280
-          </Button>
+          </ButtonCustom>
         </div>
         
         <button 
@@ -89,13 +89,13 @@ const Navbar = () => {
             >
               حجز موعد
             </a>
-            <Button 
+            <ButtonCustom 
               variant="primary" 
               icon={<Phone size={18} />} 
               className="w-full justify-center mt-2 rtl:flex-row-reverse"
             >
               0645483280
-            </Button>
+            </ButtonCustom>
           </div>
         </div>
       )}

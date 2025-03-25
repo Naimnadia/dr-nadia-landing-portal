@@ -1,6 +1,6 @@
 
 import React from 'react';
-import Button from './ui/Button';
+import ButtonCustom from './ui/button-custom';
 import { Calendar, ArrowLeft } from 'lucide-react';
 
 const Hero = () => {
@@ -26,7 +26,7 @@ const Hero = () => {
               رعاية طبية متميزة ومخصصة لكل مريض.
             </p>
             <div className="flex flex-wrap gap-4 justify-center md:justify-end">
-              <Button 
+              <ButtonCustom 
                 size="lg" 
                 variant="primary" 
                 icon={<Calendar size={18} />} 
@@ -35,8 +35,8 @@ const Hero = () => {
                 onClick={() => document.getElementById('appointment')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 حجز موعد
-              </Button>
-              <Button 
+              </ButtonCustom>
+              <ButtonCustom 
                 size="lg" 
                 variant="outline" 
                 icon={<ArrowLeft size={18} />} 
@@ -45,18 +45,19 @@ const Hero = () => {
                 onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 خدماتنا
-              </Button>
+              </ButtonCustom>
             </div>
           </div>
           
-          <div className="w-full md:w-5/12 animate-slide-in-right hidden md:block">
+          <div className="w-full md:w-5/12 animate-slide-in-right">
             <div className="relative w-full max-w-md mx-auto">
               <div className="w-full aspect-[3/4] rounded-2xl bg-accent/10 p-2">
                 <div className="w-full h-full rounded-xl overflow-hidden">
-                  {/* Will be replaced with actual doctor image */}
-                  <div className="w-full h-full bg-secondary/20 flex items-center justify-center">
-                    <span className="text-secondary text-lg">صورة الدكتورة نادية</span>
-                  </div>
+                  <img 
+                    src="/lovable-uploads/366296c8-32b7-4a4d-bd5e-1c896d9472bc.png" 
+                    alt="الدكتورة نادية نعيم" 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
               <div className="absolute -top-6 -right-6 w-24 h-24 rounded-full bg-accent flex items-center justify-center shadow-lg">
