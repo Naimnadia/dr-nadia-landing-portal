@@ -23,10 +23,10 @@ const Button = ({
   const baseStyles = "relative inline-flex items-center justify-center rounded-lg font-medium transition-all focus:outline-none focus:ring-2 focus:ring-offset-2";
   
   const variants = {
-    primary: "bg-medical-600 text-white border border-transparent hover:bg-medical-700 focus:ring-medical-500",
-    secondary: "bg-medical-50 text-medical-700 border border-transparent hover:bg-medical-100 focus:ring-medical-500",
-    outline: "bg-transparent border border-medical-300 text-medical-700 hover:bg-medical-50 focus:ring-medical-500",
-    ghost: "bg-transparent text-medical-700 border border-transparent hover:bg-medical-50 focus:ring-medical-500"
+    primary: "bg-primary text-white border border-transparent hover:bg-primary/90 focus:ring-primary/50",
+    secondary: "bg-secondary text-background border border-transparent hover:bg-secondary/90 focus:ring-secondary/50",
+    outline: "bg-transparent border border-white/20 text-white hover:bg-white/10 focus:ring-white/30",
+    ghost: "bg-transparent text-white border border-transparent hover:bg-white/10 focus:ring-white/30"
   };
   
   const sizes = {

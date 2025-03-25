@@ -20,8 +20,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        display: ['Playfair Display', 'serif'],
+        sans: ['Poppins', 'Inter', 'sans-serif'],
+        display: ['Poppins', 'serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -124,6 +124,9 @@ export default {
         "slide-up": "slide-up 0.6s ease-out forwards",
         "slide-down": "slide-down 0.6s ease-out forwards",
         "slide-in-right": "slide-in-right 0.6s ease-out forwards"
+      },
+      backgroundImage: {
+        'hero-pattern': "url('/lovable-uploads/caf7d923-d09e-4f51-a865-0fbe9649f712.png')",
       }
     }
   },
