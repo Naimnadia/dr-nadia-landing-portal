@@ -12,7 +12,7 @@ const Navbar = () => {
       setIsScrolled(window.scrollY > 20);
     };
     
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   
@@ -22,23 +22,23 @@ const Navbar = () => {
   
   return (
     <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'py-3 bg-background/80 backdrop-blur-md shadow-sm' : 'py-5 bg-transparent'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 transform-gpu ${
+        isScrolled ? 'py-3 bg-background/90 backdrop-blur-md shadow-sm' : 'py-5 bg-transparent'
       }`}
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
-        <a href="#" className="text-3xl font-display font-bold text-white sharp-text">
+        <a href="#" className="text-3xl font-display font-bold text-white sharp-text transform-gpu">
           د. نادية نعيم
         </a>
         
-        <nav className="hidden md:flex items-center space-x-6 rtl:space-x-reverse">
+        <nav className="hidden md:flex items-center space-x-6 rtl:space-x-reverse transform-gpu">
           <a href="#home" className="text-white/80 hover:text-white transition-colors text-lg font-medium sharp-text">الرئيسية</a>
           <a href="#services" className="text-white/80 hover:text-white transition-colors text-lg font-medium sharp-text">الخدمات</a>
           <a href="#experience" className="text-white/80 hover:text-white transition-colors text-lg font-medium sharp-text">الخبرات</a>
           <a href="#appointment" className="text-white/80 hover:text-white transition-colors text-lg font-medium sharp-text">حجز موعد</a>
         </nav>
         
-        <div className="hidden md:flex">
+        <div className="hidden md:flex transform-gpu">
           <ButtonCustom 
             variant="primary" 
             icon={<Phone size={18} />} 
@@ -49,7 +49,7 @@ const Navbar = () => {
         </div>
         
         <button 
-          className="block md:hidden text-white"
+          className="block md:hidden text-white transform-gpu"
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
@@ -57,9 +57,9 @@ const Navbar = () => {
         </button>
       </div>
       
-      {/* Mobile Menu */}
+      {/* Mobile Menu with improved transition */}
       {isMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-md shadow-lg animate-slide-down">
+        <div className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-md shadow-lg transform-gpu">
           <div className="flex flex-col p-6 space-y-4">
             <a 
               href="#home" 

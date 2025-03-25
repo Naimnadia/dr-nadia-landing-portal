@@ -13,33 +13,41 @@ const Index = () => {
     document.documentElement.dir = 'rtl';
     document.title = 'د. نادية نعيم - أخصائية أنف وأذن وحنجرة';
     
-    // Smooth scrolling for anchor links with improved performance
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        if (!targetId) return;
-        
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-          // Using scrollIntoView with improved options for smoother scrolling
-          targetElement.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
+    // Optimize for high performance scrolling
+    const optimizeForScrolling = () => {
+      // Add a small delay to ensure DOM is ready
+      setTimeout(() => {
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            if (!targetId) return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              // Use browser's native scrollIntoView with optimizations
+              window.scrollTo({
+                top: targetElement.getBoundingClientRect().top + window.scrollY,
+                behavior: 'smooth'
+              });
+            }
           });
-        }
-      });
-    });
+        });
+      }, 100);
+    };
     
-    // Improve scrolling performance
-    const improveScrollPerformance = () => {
+    // Apply hardware acceleration to all sections for smooth transitions
+    const applyHardwareAcceleration = () => {
       const sections = document.querySelectorAll('section');
       sections.forEach(section => {
         section.classList.add('smooth-transition');
+        section.style.transform = 'translate3d(0, 0, 0)';
+        section.style.backfaceVisibility = 'hidden';
       });
     };
     
-    improveScrollPerformance();
+    optimizeForScrolling();
+    applyHardwareAcceleration();
     
     return () => {
       // Clean up event listeners
@@ -52,10 +60,12 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <Navbar />
-      <Hero />
-      <Services />
-      <Experience />
-      <Appointment />
+      <main className="transform-gpu">
+        <Hero />
+        <Services />
+        <Experience />
+        <Appointment />
+      </main>
       <Footer />
     </div>
   );
