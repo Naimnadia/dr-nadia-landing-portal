@@ -14,6 +14,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { toast } from "sonner";
+import { Button } from "@/components/ui/button";
 
 const appointmentFormSchema = z.object({
   name: z.string().min(3, { message: "الاسم مطلوب ويجب أن يتكون من 3 أحرف على الأقل" }),
@@ -183,7 +184,7 @@ const Appointment = () => {
                               <Popover>
                                 <PopoverTrigger asChild>
                                   <FormControl>
-                                    <ButtonCustom
+                                    <Button
                                       variant="outline"
                                       className={cn(
                                         "w-full pl-3 text-right font-normal",
@@ -196,7 +197,7 @@ const Appointment = () => {
                                         <span>اختر التاريخ</span>
                                       )}
                                       <Calendar className="ml-auto h-4 w-4 opacity-50" />
-                                    </ButtonCustom>
+                                    </Button>
                                   </FormControl>
                                 </PopoverTrigger>
                                 <PopoverContent className="w-auto p-0" align="start">
