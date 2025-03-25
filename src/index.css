@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
@@ -15,13 +16,13 @@
     --popover: 0 0% 100%;
     --popover-foreground: 223 36% 13%;
     
-    --primary: 196 100% 47%;
+    --primary: 24 94% 59%;
     --primary-foreground: 210 40% 98%;
     
     --secondary: 199 69% 84%;
     --secondary-foreground: 223 36% 13%;
     
-    --accent: 9 87% 67%;
+    --accent: 24 94% 59%;
     --accent-foreground: 210 40% 98%;
     
     --muted: 210 20% 96%;
@@ -32,7 +33,7 @@
     
     --border: 214 32% 91%;
     --input: 214 32% 91%;
-    --ring: 196 100% 47%;
+    --ring: 24 94% 59%;
     
     --radius: 0.75rem;
   }
